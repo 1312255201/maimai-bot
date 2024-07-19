@@ -467,7 +467,6 @@ suspend fun Context2d.drawCharts(charts: List<MaimaiPlayScore>, cols: Int, start
                 )
             }
             if (chart.fc.isNotEmpty()) {
-                System.out.println(chart.fc)
                 config.pos["fcIcon"] ?.let { fcIcon ->
                     drawImage(
                         resolveImageCache("music_icon_${chart.fc}.png").toBMP32()
@@ -477,6 +476,7 @@ suspend fun Context2d.drawCharts(charts: List<MaimaiPlayScore>, cols: Int, start
                 }
             }
             if (chart.fs.isNotEmpty()) {
+                println(chart.fs)
                 config.pos["fsIcon"] ?.let { fsIcon ->
                     drawImage(
                         resolveImageCache("music_icon_${chart.fs}.png").toBMP32()
