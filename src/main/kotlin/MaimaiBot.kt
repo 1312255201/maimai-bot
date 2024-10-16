@@ -267,7 +267,7 @@ object MaimaiBot : KotlinPlugin(
                 }
             }
             arrayOf("真", "超", "檄", "橙", "晓", "桃", "樱", "紫", "堇", "白", "雪", "辉", "舞", "熊", "华", "爽",
-                "煌", "宙", "星", "").forEach { ver ->
+                "煌", "宙", "星","祭","祝", "").forEach { ver ->
                 arrayOf("极", "将", "神", "舞舞", "霸者").forEach { type ->
                     if (ver != "" || type == "霸者")
                         channel.subscribeMessages {
@@ -758,6 +758,8 @@ object MaimaiBot : KotlinPlugin(
         in listOf("熊", "华") -> listOf("maimai でらっくす", "maimai でらっくす PLUS")
         in listOf("爽", "煌") -> listOf("maimai でらっくす Splash")
         in listOf("宙", "星") -> listOf("maimai でらっくす UNiVERSE")
+        in listOf("祭", "祝") -> listOf("maimai でらっくす FESTiVAL")
+        in listOf("双", "宴") -> listOf("maimai でらっくす BUDDiES")
         in listOf("舞", "") -> listOf("maimai", "maimai PLUS", "maimai GreeN", "maimai GreeN PLUS", "maimai ORANGE",
             "maimai ORANGE PLUS", "maimai PiNK", "maimai PiNK PLUS", "maimai MURASAKi", "maimai MURASAKi PLUS",
             "maimai MiLK", "MiLK PLUS", "maimai FiNALE")
@@ -765,7 +767,7 @@ object MaimaiBot : KotlinPlugin(
             "maimai ORANGE PLUS", "maimai PiNK", "maimai PiNK PLUS", "maimai MURASAKi", "maimai MURASAKi PLUS",
             "maimai MiLK", "MiLK PLUS", "maimai FiNALE", "maimai でらっくす", "maimai でらっくす PLUS",
             "maimai でらっくす Splash", "maimai でらっくす Splash PLUS", "maimai でらっくす UNiVERSE",
-            "maimai でらっくす UNiVERSE PLUS", "maimai でらっくす FESTiVAL", "maimai でらっくす FESTiVAL PLUS")
+            "maimai でらっくす UNiVERSE PLUS", "maimai でらっくす FESTiVAL", "maimai でらっくす FESTiVAL PLUS","maimai でらっくす BUDDiES")
         else -> emptyList()
     }
     suspend fun queryPlate(vName: String, type: String, queryType: String, id: String, event: MessageEvent) = event.run {
